@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GST Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .container {
+        max-width: 500px;
+        margin: 100px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center">GST Calculator</h2>
+      <form id="gstForm">
+        <div class="form-group">
+          <label for="number">GST Number:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="number"
+            placeholder="Enter the GST number"
+            required
+          />
+        </div>
+        <div class="form-group">
+            <label for="amount">Customer Address:</label>
+            <input type="text"
+              class="form-control"
+              id="text"
+              placeholder="Enter Address"
+              required
+            />
+            <div class="form-group">
+                <label for="amount">Product:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="amount"
+                  placeholder="Enter the Product"
+                  required
+                />
+                <div class="form-group">
+                    <label for="amount">Quanity:</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="amount"
+                      placeholder="Enter Quanity"
+                      required
+                    />
+        <div class="form-group">
+          <label for="gstRate">GST Rate (%):</label>
+          <input
+            type="number"
+            class="form-control"
+            id="gstRate"
+            placeholder="Enter GST rate"
+            required
+          />
+         
+            <div class="form-group">
+                <label for="amount">Amount (excluding GST):</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="amount"
+                  placeholder="Enter amount"
+                  required
+                />
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success btn-block">
+        Calculate
+      </button>
+    </form>
+    <div class="mt-3" id="result"></div>
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Function to calculate GST
+    function calculateGST() {
+      var amount = parseFloat(document.getElementById("amount").value);
+      var gstRate = parseFloat(document.getElementById("gstRate").value);
+      var gstAmount = (amount * gstRate) / 100;
+      var totalAmount = amount + gstAmount;
+
+      document.getElementById("result").innerHTML = `
+    <h4>Result</h4>
+    <p>Amount (excluding GST): ${amount.toFixed(2)}</p>
+    <p>GST Amount: ${gstAmount.toFixed(2)}</p>
+    <p>Total Amount (including GST): ${totalAmount.toFixed(2)}</p>
+  `;
+    }
+
+    // Submit form event
+    document
+      .getElementById("gstForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        calculateGST();
+      });
+  </script>
+  </body>
+</html>

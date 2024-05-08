@@ -1,0 +1,137 @@
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+body {
+  background-color: silver;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+// {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-left: 180px;
+  padding-top: 150px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: calc(33.33% - 20px);
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  display: block;
+  padding-bottom: 60px;
+}
+
+.image-wrapper h6 {
+  position: absolute;
+  margin: 0;
+  color: white;
+  font-size: large;
+  padding: 10px;
+  background: #ff0000;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.feature {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: large;
+  padding: 30px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.feature h2 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.image-wrapper:hover .feature {
+  opacity: 1;
+  height: 320px;
+  width: 270px;
+}
+
+.feature ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature ul li {
+  margin-bottom: 10px;
+}
+
+.feature ul li strong {
+  margin-right: 5px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  position: bottom;
+  width: 100%;
+  height: 10%;
+  bottom: 50px;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+h1 {
+  text-align: center;
+  font-size: 40px;
+  background-color: whitesmoke;
+  border-style: solid;
+  box-shadow: 8px 8px 4px;
+  padding: 25px;
+  border-radius: 12px;
+  margin-left: 42%;
+  margin-right: 42%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+h3 {
+  text-align: center;
+  font-size: 40px;
+  background-color: whitesmoke;
+  border-style: double;
+  box-shadow: 8px 8px 4px;
+  padding: 25px;
+  border-radius: 12px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+.collapse {
+  font-size: 20px;
+  border-style: double;
+  background-color: black;
+  box-shadow: 8px 8px 4px;
+  padding: 25px;
+  border-radius: 12px;
+  margin-left: 1%;
+  margin-right: 70%;
+
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}

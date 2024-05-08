@@ -1,0 +1,33 @@
+h1 {
+    color: darkred;
+    text-align: center;
+    font-size:40px;
+    border-style:solid;
+    box-shadow: 8px 8px 4px;
+    padding:25px;
+    border-radius: 12px;
+    margin-left: 42%;
+    margin-right: 42%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+  }
+
+h2{
+    
+    background-color:white;
+    padding: 20px;
+    margin-right: 76%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 22px;
+}
+li{
+    color: black;
+    font-size:20px;
+    padding: 2px;
+}
+P{
+    color: black;
+    font-size:18px;
+    padding: 2px;
+}
